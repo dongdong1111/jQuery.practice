@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1">divdiv</div>
+        <div class="div1">didididi</div>
+        <div class="div1">divdididi</div>
+        <div class="div1">divdivdivdiv</div>
+    <ul id="ul1">
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+    </ul>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+    /*    //jq对象
+        //$('#div1').css('background','red');
+        var $div1 = $('#div1');
+        var oDiv1 = document.getElementById('div1');
+        console.log($div1[0].innerHTML);//jq对象 -> 原生对象 $obj.get(0) $obj[0]
+        console.log(oDiv1.innerHTML);
+        $(oDiv1).css('background','red');// 原生 ->jq  $(obj)
+        //文档就绪函数
+        $(document).ready(function () {
+            console.log($('#div1'))
+        });//dom结构加载完就执行
+        //简写
+        $(function () {
+            console.log($('#div1'))
+        });
+
+        window.onload= function(){} ;//等到HTML节点 和资源文件加载完才执行*/
+
+        $(function () {
+           // console.log($('#div1')) ;
+           //  $('.div1').css('background','#f00');//不需要循环遍历了
+            $('#ul1 li:even').css('background','#f00');
+            $('#ul1 li:odd').css('background','#0f0');
+        });
+
+    </script>
+</body>
+</html>
